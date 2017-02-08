@@ -11,15 +11,12 @@ namespace ToDo.Models
     {
         [Key]
 
-        public int ListID;
-        public string Task;
+        public int ListID { get; set; }
+        public string Title { get; set; }
+        public DateTime Date { get; set; }
 
 
-
-
-        [ForeignKey]
-
-        public string Title;
+        public virtual ICollection<Task> Tasks { get; set; }
 
     }
 }
